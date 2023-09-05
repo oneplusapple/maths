@@ -1,1 +1,117 @@
+1. √1 + x^3dx
+from numpy import *
+a=0
+b=1
+p=6
+n=7
+h=(b-a)/p
+x=linspace(a,b,n)
+f=sqrt(1+x**3)
+for i in range(0,n):
+    print(round(f[i],ndigits=4))
+TR=round((h/2)*(f[0]+2*sum(f[1:n-1])+f[n-1]),ndigits=4)
+S13=round((h/3)*((f[0]+f[n-1])+4*sum(f[1:n-1:2]) +2*sum(f[2:n-1:2])),ndigits=4)
+S38=round((3*h/8)*((f[0]+f[n-1])+2*sum(f[3:n-2:3])+3*sum(f[1:n:3]+(f[2:n-1:3]))),ndigits=4)
+print("The required integral by Trapezoidal Rule is",TR)
+print("The required integral by Simpson’s 1/3 Rule is",S13)
+print("The required integral by Simpson’s 3/8 Rule is :",S38)
+Output:-
+1.0
+1.0023
+1.0184
+1.0607
+1.1386
+1.2565
+1.4142
+The required integral by Trapezoidal Rule is 1.1139
+The required integral by Simpson’s 1/3 Rule is 1.1114
+The required integral by Simpson’s 3/8 Rule is 1.1114
 
+2. dx/1+x^2
+from numpy import *
+a=0
+b=1
+p=6
+n=7
+h=(b-a)/p
+x=linspace(a,b,n)
+f=(1/(1+x**2))
+for i in range(0,n):
+    print(round(f[i],ndigits=4))
+TR=round((h/2)*(f[0]+2*sum(f[1:n-1])+f[n-1]),ndigits=4)
+S13=round((h/3)*((f[0]+f[n-1])+4*sum(f[1:n-1:2]) +2*sum(f[2:n-1:2])), ndigits=4)
+S38=round((3*h/8)*((f[0]+f[n-1])+2*sum(f[3:n-2:3]) +3*sum(f[1:n:3]+(f[2:n-1:3]))),ndigits=4)
+print("The required integral by Trapezoidal Rule is",TR)
+print("The required integral by Simpson’s 1/3 Rule is",S13)
+print("The required integral by Simpson’s 3/8 Rule is :",S38)
+Output:-
+1.0
+0.973
+0.9
+0.8
+0.6923
+0.5902
+0.5
+The required integral by Trapezoidal Rule is 0.7842
+The required integral by Simpson’s 1/3 Rule is 0.7854
+The required integral by Simpson’s 3/8 Rule is 0.7854
+
+3. dx/(1+x)^2
+from numpy import*
+a=0
+b=6
+p=6
+
+n=7
+h=(b-a)/p
+x=linspace(a,b,n)
+f=(1/(1+x)**2)
+for i in range(0,n):
+print(round(f[i],ndigits=4))
+TR=round((h/2)*(f[0]+2*sum(f[1:n-1])+f[n-1]),ndigits=4)
+S13=round((h/3)*((f[0]+f[n-1])+4*sum(f[1:n-1:2]) +2*sum(f[2:n-1:2])), ndigits=4)
+S38=round((3*h/8)*((f[0]+f[n-1])+2*sum(f[3:n-2:3]) +3*sum(f[1:n:3]+(f[2:n-1:3]))),
+ndigits=4)
+print("The required integral by Trapezoidal Rule is",TR)
+print("The required integral by Simpson’s 1/3 Rule is",S13)
+print("The required integral by Simpson’s 3/8 Rule is :",S38)
+Output:-
+1.0
+0.25
+0.1111
+0.0625
+0.04
+0.0278
+0.0204
+The required integral by Trapezoidal Rule is 1.0016
+The required integral by Simpson’s 1/3 Rule is 0.8946
+The required integral by Simpson’s 3/8 Rule is 0.912
+
+4.dx/(1+x)
+from numpy import*
+a=0
+b=1
+p=6
+n=7
+h=(b-a)/p
+x=linspace(a,b,n)
+f=(1/(1+x))
+for i in range(0,n):
+    print(round(f[i],ndigits=4))
+TR=round((h/2)*(f[0]+2*sum(f[1:n-1])+f[n-1]),ndigits=4)
+S13=round((h/3)*((f[0]+f[n-1])+4*sum(f[1:n-1:2]) +2*sum(f[2:n-1:2])),ndigits=4)
+S38=round((3*h/8)*((f[0]+f[n-1])+2*sum(f[3:n-2:3]) +3*sum(f[1:n:3]+(f[2:n-1:3]))),ndigits=4)
+print("The required integral by Trapezoidal Rule is",TR)
+print("The required integral by Simpson’s 1/3 Rule is",S13)
+print("The required integral by Simpson’s 3/8 Rule is :",S38)
+Output:-
+1.0
+0.8571
+0.75
+0.6667
+0.6
+0.5455
+0.5
+The required integral by Trapezoidal Rule is 0.6949
+The required integral by Simpson’s 1/3 Rule is 0.6932
+The required integral by Simpson’s 3/8 Rule is 0.6932
