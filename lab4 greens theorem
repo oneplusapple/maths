@@ -1,0 +1,32 @@
+[(x + 2y) dx + (x − 2y)dy]where C is the region bounded by coordinate axes and the line x=1 and y=1.
+from sympy import *
+var('x,y')
+p=x + 2*y
+q=x - 2*y
+f=diff(q,x)-diff(p,y)
+soln=integrate(f,[x,0,1],[y,0,1])
+print("I=",soln)
+Output:-
+I= -1
+
+[(xy + y^2) dx + (x^2)dy]where C is the closed curve bounded by y=x and y=x^2
+from sympy import *
+var('x,y')
+p=x*y + y**2
+q=x**2
+f=diff(q,x)-diff(p,y)
+soln=integrate(f,[y,x**2,x],[x,0,1])
+print("I=",soln)
+Output:-
+I= -1/20
+
+[(3x + 4y) dx + (2x − 3y)dy]where C is the boundary of the circle x2 + y2 = 4
+from sympy import *
+var('x,y')
+p=3*x+4*y
+q=2*x-3*y
+f=diff(q,x)-diff(p,y)
+soln=integrate(f,[y,-sqrt(4-x**2),sqrt(4-x**2)],[x,-2,2])
+print("I=",soln)
+Output:-
+I= -8*pi
