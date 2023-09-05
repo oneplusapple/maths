@@ -1,0 +1,41 @@
+F=xy^2i+2x^2yzj-3yz^2k
+from sympy.physics.vector import *
+from sympy import var
+var('x,y,z')
+v=ReferenceFrame('v')
+F=v[0]*v[1]**2*v.x+2*v[0]**2*v[1]*v[2]*v.y-3*v[1]*v[2]**2*v.z
+G=curl(F,v)
+F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("Given vector point function is ")
+display(F)
+G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("\n Curl of F=")
+display(G)
+
+F=x^2yz+2xy^2zj+xyz^2k
+from sympy.physics.vector import *
+from sympy import var
+var('x,y,z')
+v=ReferenceFrame('v')
+F=v[0]**2*v[1]*v[2]*v.x+2*v[0]*v[1]**2*v[2]*v.y+v[0]*v[1]*v[2]**2*v.z
+G=curl(F,v)
+F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("Given vector point function is ")
+display(F)
+G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("\n Curl of F=")
+display(G)
+
+F=2x^2zi-xy^2zj+3yz^2k
+from sympy.physics.vector import *
+from sympy import var
+var('x,y,z')
+v=ReferenceFrame('v')
+F=2*v[0]**2*v[2]*v.x-v[0]*v[1]**2*v[2]*v.y+3*v[1]*v[2]**2*v.z
+G=curl(F,v)
+F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("Given vector function F = ")
+display(F)
+G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
+print("\n Curl of F=")
+display(G)
