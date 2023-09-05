@@ -1,0 +1,29 @@
+xp + yq = z, where z = f(x, y)
+from sympy . solvers .pde import pdsolve
+from sympy import Function , Eq ,cot , classify_pde , pprint
+from sympy .abc import x, y, a
+f = Function ('f')
+z = f(x, y)
+zx = z.diff (x)
+zy = z.diff (y)
+# Solve xp+yq=z
+eq = Eq(x*zx+y*zy , z)
+pprint (eq)
+print ("\n")
+soln = pdsolve (eq ,z)
+pprint( soln )
+
+x^2p + y^2 q = (x + y)z, where p =∂z/∂x and q =∂z/∂y
+from sympy . solvers .pde import pdsolve
+from sympy import Function , Eq ,cot , classify_pde , pprint
+from sympy .abc import x, y, a
+f = Function ('f')
+z = f(x, y)
+zx = z. diff (x)
+zy = z. diff (y)
+# Solve x^2p+y^2q =(x+y)z
+eq=Eq(x ** 2*zx+y ** 2*zy ,(x+y)*z)
+pprint (eq)
+print ("\n")
+soln = pdsolve (eq ,z)
+pprint ( soln )
