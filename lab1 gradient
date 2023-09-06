@@ -1,40 +1,41 @@
 x^2yz
 from sympy.vector import*
 from sympy import symbols
-C=CoordSys3D('')
-f=C.x**2*(C.y)*(C.z)
-print("\n The given scalar point function is \n")
-display(f)
-delop=Del()
-display(delop(f))
-gradf=gradient(f)
-print("\n Gradient of {f} is \n")
-display(gradf)
+N=CoordSys3D('')
+x,y,z=symbols('x y z')
+A=N.x**2*N.y*N.z
+print("The given scalar point function is:")
+display(A)
+D=Del()
+display(D(A))
+w=gradient(A)
+print("Gradient of F is:")
+display(w)
 
 3x^2yz
-from sympy.physics.vector import *
-from sympy import var
-var('x,y,z')
-v=ReferenceFrame('v')
-F=3*v[0]**2*v[1]*v[2]
-G=gradient(F,v)
-F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("Given scalar function F = ")
-display(F)
-G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("\n Gradient of F=")
-display(G)
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+x,y,z=symbols('x y z')
+A=3*N.x**2*N.y*N.Z
+print("The given scalar point function is:")
+display(A)
+D=Del()
+display(D(A))
+w=gradient(A)
+print("Gradient of F is:")
+display(w)
 
 x^2y^3z^4
-from sympy.physics.vector import *
-from sympy import var
-var('x,y,z')
-v=ReferenceFrame('v')
-F=v[0]**2*v[1]**3*v[2]**4
-G=gradient(F,v)
-F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("Given scalar function F = ")
-display(F)
-G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("\n Gradient of F=")
-display(G)
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+x,y,z=symbols('x y z')
+A=N.x**2*N.y**3*N.z**4
+print("The given scalar point function is:")
+display(A)
+D=Del()
+display(D(A))
+w=gradient(A)
+print("Gradient of F is:")
+display(w)
