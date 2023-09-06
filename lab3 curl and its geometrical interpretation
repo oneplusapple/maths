@@ -1,41 +1,44 @@
 F=xy^2i+2x^2yzj-3yz^2k
-from sympy.physics.vector import *
-from sympy import var
-var('x,y,z')
-v=ReferenceFrame('v')
-F=v[0]*v[1]**2*v.x+2*v[0]**2*v[1]*v[2]*v.y-3*v[1]*v[2]**2*v.z
-G=curl(F,v)
-F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("Given vector point function is ")
-display(F)
-G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("\n Curl of F=")
-display(G)
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+x,y,z=symbols('x,y,z')
+A=N.x*N.y*2*N.i+2*N.x2*N.y*N.z*N.j-3*N.y*N.z*2*N.k
+print("The given scalar point function is:")
+display(A)
+D=Del()
+p=D.dot(A)
+display(p)
+curlA=curl(A)
+print("Curl of F is:")
+display(curlA)
 
 F=x^2yz+2xy^2zj+xyz^2k
-from sympy.physics.vector import *
-from sympy import var
-var('x,y,z')
-v=ReferenceFrame('v')
-F=v[0]**2*v[1]*v[2]*v.x+2*v[0]*v[1]**2*v[2]*v.y+v[0]*v[1]*v[2]**2*v.z
-G=curl(F,v)
-F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("Given vector point function is ")
-display(F)
-G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("\n Curl of F=")
-display(G)
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+x,y,z=symbols('x,y,z')
+A=N.x*2*N.y*N.z*N.i+2*N.x*N.y2*N.z*N.j+N.x*N.y*N.z*2*N.k
+print("The given scalar point function is:")
+display(A)
+D=Del()
+p=D.dot(A)
+display(p)
+curlA=curl(A)
+print("Curl of F is:")
+display(curlA)
 
 F=2x^2zi-xy^2zj+3yz^2k
-from sympy.physics.vector import *
-from sympy import var
-var('x,y,z')
-v=ReferenceFrame('v')
-F=2*v[0]**2*v[2]*v.x-v[0]*v[1]**2*v[2]*v.y+3*v[1]*v[2]**2*v.z
-G=curl(F,v)
-F=F.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("Given vector function F = ")
-display(F)
-G=G.subs([(v[0],x), (v[1],y), (v[2],z)])
-print("\n Curl of F=")
-display(G)
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+x,y,z=symbols('x,y,z')
+A=2*N.x**2*N.z*N.i-N.x*N.y**2*N.Z*N.j+3*N.y*N.z**2*N.k
+print("The given scalar point function is:")
+display(A)
+D=Del()
+p=D.dot(A)
+display(p)
+curlA=curl(A)
+print("Curl of F is:")
+display(curlA)
