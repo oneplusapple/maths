@@ -61,7 +61,6 @@ from numpy import*
 a=0
 b=6
 p=6
-
 n=7
 h=(b-a)/p
 x=linspace(a,b,n)
