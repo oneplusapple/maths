@@ -17,7 +17,7 @@ from sympy.vector import*
 from sympy import symbols
 N=CoordSys3D('')
 x,y,z=symbols('x y z')
-A=3*N.x**2*N.y*N.Z
+A=3*N.x**2*N.y*N.z
 print("The given scalar point function is:")
 display(A)
 D=Del()
